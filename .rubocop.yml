@@ -1,0 +1,183 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'components/*/test/dummy/**/*'
+    - 'components/*/db/migrate/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'log/**/*'
+    - 'public/**/*'
+    - 'shared/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+
+
+#################### Layout ####################
+
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/CaseIndentation:
+  EnforcedStyle: end
+
+Layout/ElseAlignment:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: ending_only
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: key
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/LineLength:
+  Enabled: false
+  Max: 150
+  IgnoredPatterns:
+    - '^\s*#'
+
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: new_line
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+#################### Lint ######################
+
+Lint/SuppressedException:
+  AllowComments: true
+
+#################### Metrics ###################
+
+Metrics/AbcSize:
+  Max: 100
+
+#################### Naming ####################
+
+Naming/AccessorMethodName:
+  Enabled: false
+
+Naming/PredicateName:
+  Enabled: false
+
+#################### Style ####################
+
+Style/BlockDelimiters:
+  EnforcedStyle: braces_for_chaining
+
+# Take a look at enabling this after migrating to Rails 6/zeitwerk
+Style/ClassAndModuleChildren:
+  Enabled: false
+  EnforcedStyle: compact
+
+Style/Documentation:
+  Enabled: false
+
+Style/FormatStringToken:
+  EnforcedStyle: template
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Not a bad rule to be challenged by, but can make code less readable in some scenarios.
+Style/GuardClause:
+  Enabled: false
+
+# Disabling because it converts some instances to use colons instead of hash rockets
+# which messes up the alignment from Layout/AlignHash.
+Style/HashSyntax:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/NegatedIf:
+  EnforcedStyle: postfix
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
+
+Style/RedundantReturn:
+  Enabled: false
+  AllowMultipleReturnValues: true
+
+Style/RescueStandardError:
+  EnforcedStyle: implicit
+
+Style/RegexpLiteral:
+  AllowInnerSlashes: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Style/TernaryParentheses:
+  EnforcedStyle: require_parentheses_when_complex
+
+Style/WhileUntilModifier:
+  Enabled: false
+
+Style/WordArray:
+  EnforcedStyle: brackets
+
+### All rules below this have not been explicitly tested yet.
+
+###################### Metrics ####################################
+
+# https://rubocop.readthedocs.io/en/latest/cops_metrics/#metricsblocklength
+Metrics/BlockLength:
+  Enabled: false
+  Exclude:
+    - '**/*.rake'
+    - 'test/**/*.rb'
+    - 'config/routes.rb'
+
+Metrics/BlockNesting:
+  Max: 4
+
+Metrics/ClassLength:
+  Enabled: false
+  Max: 400
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+  Max: 8
+
+Metrics/PerceivedComplexity:
+  Enabled: false
